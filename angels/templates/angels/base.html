@@ -1,0 +1,113 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/toolkit-startup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/application-startup.css' %}">
+    <link href="assets/css/toolkit-startup.css" rel="stylesheet">
+    <link href="assets/css/application-startup.css" rel="stylesheet">
+
+    <title>
+
+        #econobilidade &middot;
+
+    </title>
+
+
+      <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic|Work+Sans:300,400,500,600' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{% static 'css/toolkit-startup.css' %}">
+      <link rel="stylesheet" href="{% static 'css/application-startup.css' %}">
+
+
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
+  </head>
+
+
+<body>
+
+
+<div class="stage" id="stage">
+
+
+{% load staticfiles %}
+
+
+
+
+
+
+<img src="{% static "images/Logo JPG Format.jpg" %}"  class="img-responsive" height="400" width="100%" alt="My image"/>
+
+
+
+<div class="block block-inverse block-fill-height app-header"
+     style="background-image: url(assets/img/startup-1.jpg);">
+
+
+  <img class="app-graph"  src="{% static "images/startup-0.svg" %}" width="100%" >
+  <div class="block-xs-middle pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-lg-6">
+          <h1 class="block-titleData frequency">Inteligencia Empresarial</h1>
+          <p class="lead mb-4 text-muted"> Analise seus resultados e compare com seus concorrentes! Construa cenários de crescimento através da contabilidade!</p>
+          <button class="btn btn-primary btn-lg" onclick="location.href = 'http://contabilidade.econobilidade.com';">Entenda melhor aqui!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+        {# SCRIPTS#}
+
+        <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+
+
+   {% block content %}
+
+
+
+    </body>
+
+    {% endblock %}
+        </html>

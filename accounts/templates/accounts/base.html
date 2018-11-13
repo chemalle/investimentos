@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<!-- Fontawesome CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+
+<!-- jquery-confirm CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+
+<!-- Custom Stripe Styling -->
+<link rel="stylesheet" href="{% static 'css/stripe-custom-style.css' %}">
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Base Template</title>
+
+        {% block base_head %}{% endblock %}
+    </head>
+    <body>
+
+      <div class='container'>
+        {% if messages %}
+      <div class="alert alert-success messages">
+          {% for message in messages %}
+          <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+              {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+              {{ message }}<br/>
+          </span>
+          {% endfor %}
+      </div>
+      {% endif %}
+      {% block content %}{% endblock %}
+    </div>
+
+      
+        {% block javascript %}
+
+        {% endblock %}
+    </body>
+  </html>
